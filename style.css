@@ -1,0 +1,248 @@
+/* Importing Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap");
+
+/* Basic Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    position: relative;
+}
+
+/* Styling Main Container  */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0px 10px;
+    min-height: 300px;
+}
+
+/* Form Heading  */
+.heading {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* Form  */
+.loginForm {
+    width: 100%;
+    padding: 25px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid #eff1f3;
+    margin: 0px 10px;
+}
+
+/* Form Heading And About  */
+.formHeading {
+    font-size: 1rem;
+}
+
+.formAbout {
+    color: #4e4d54;
+    font-weight: 400;
+}
+
+/* Label, Inputfield & Reset Button Here  */
+.formLabel {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+button {
+    font-size: 0.7rem;
+    width: 100%;
+    padding: 9px;
+    border-radius: 7px;
+    border: 2px solid #dedede;
+    height: 2.5rem;
+}
+
+
+button {
+    background-color: #1964ff;
+    color: #fff;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* Password Requirements  */
+.pwdReq {
+    display: flex;
+    font-size: 0.6rem;
+    color: #1964ff;
+    margin: 10px 0px;
+}
+
+.column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.column div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Styling Check Marks Here  */
+.checkmark {
+    width: 10px;
+}
+
+#lowerImg,
+#upperImg,
+#oneNumImg,
+#specialCharImg,
+#minImg {
+    display: none;
+}
+
+/* Media Queries For Responsiveness  */
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+
+    .loginForm {
+        gap: 10px;
+    }
+
+    .formLabel {
+        font-size: 0.7rem;
+    }
+
+    input[type="password"],
+
+    button {
+        font-size: 0.7rem;
+    }
+
+    .pwdReq {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
+
+/* Styling Popop */
+#error {
+    font-size: 0.7rem;
+    color: red;
+}
+
+.popup{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 1px solid;
+    visibility: hidden;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.5s, top 0.5s;
+}
+.popImg{
+    border-radius: 15px ;
+    height: 60%;
+}
+.popImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px ;
+
+}
+.popup p{
+    text-align: center;
+    margin: 8px 0px;
+    font-size: 13px;
+}
+
+
+.openPopup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+/* Styling Input With View Button  */
+#password{
+    border: none;
+
+}
+.passwordB, .passConf{
+    border: none;
+    border-radius: 7px;
+    height: 96%;
+    font-size: .7rem;
+    padding: 9px;
+    min-width: 90%;
+    outline: none;
+}
+input[type="text"]{
+    border: none;
+}
+.viewPass{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    border-radius: 7px;
+    border: 2px solid #dedede;
+    height: 2.5rem;
+
+}
+.viewPass input[type="password"]{
+    width: calc(90% - 5px);
+}
+.viewPass button{
+    width: calc(10% - 5px);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+}
+
+.viewPass:hover {
+    cursor: pointer;
+    border: 2px solid #236d43;
+}
+
