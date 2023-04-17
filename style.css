@@ -26,7 +26,7 @@ body {
     align-items: center;
     justify-content: center;
     max-width: 350px;
-    margin: 0px 10px;
+    margin: 0px 15px;
     min-height: 300px;
 }
 
@@ -151,6 +151,14 @@ button:hover {
         width: 100%;
     }
 }
+@media screen and (max-width: 250px) {
+    body{
+        font-size: 8px;
+    }
+    .container{
+        width: 80vw ;
+    }
+}
 
 /* Styling Popop */
 #error {
@@ -218,6 +226,7 @@ input[type="text"]{
 }
 .viewPass{
     display: flex;
+    overflow: hidden;
     align-items: center;
     gap: 1px;
     border-radius: 7px;
@@ -235,9 +244,6 @@ input[type="text"]{
     align-items: center;
     justify-content: center;
     background-color: white;
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
     border: none;
 }
 
